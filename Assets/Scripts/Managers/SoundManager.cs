@@ -57,8 +57,23 @@ public class SoundManager : Singleton<SoundManager>
         
         _audioSources[(int)Sound.Effect].PlayOneShot(clip, volume);
     }
+    
+    public void PlayStoppableSfx(string clipName, float volume = 1.0f)
+    {
+        AudioClip clip = GetOrAddClip(clipName);
+        if (clip == null) return;
+        
+        _audioSources[(int)Sound.Effect].PlayOneShot(clip, volume);
+    }
+    
+    public void StopSfx()
+    {
+        _audioSources[(int)Sound.Effect].Stop();
+    }
+    
 
     public void StopBgm() => _audioSources[(int)Sound.Bgm].Stop();
+    
 
     // 볼륨 조절
     public void SetVolume(string parameterName, float sliderValue)

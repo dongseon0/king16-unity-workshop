@@ -23,16 +23,24 @@ public class GameManager : Singleton<GameManager>
             Transform overTransform = transform.Find("GameOver_Canvas");
             if (overTransform != null) _gameOverCanvas = overTransform.gameObject;
         }
+        else
+        {
+            Debug.Log("GameOverCanvas == null");
+        }
 
         if (_gameClearCanvas == null)
         {
             Transform clearTransform = transform.Find("GameClear_Canvas");
             if (clearTransform != null) _gameClearCanvas = clearTransform.gameObject;
         }
+        else
+        {
+            Debug.Log("GameClearCanvas == null");
+        }
 
         // 초기 상태는 비활성화
-        if (_gameOverCanvas != null) _gameOverCanvas.SetActive(false);
-        if (_gameClearCanvas != null) _gameClearCanvas.SetActive(false);
+        _gameOverCanvas.SetActive(false);
+        _gameClearCanvas.SetActive(false);
     }
 
     void InitStageList()
@@ -55,7 +63,7 @@ public class GameManager : Singleton<GameManager>
             _stageList.RemoveAt(randomIndex);
 
             SceneManager.LoadScene("Stage_" + stageNum);
-            SoundManager.Instance.PlaySfx("SFX/Common/game-start");
+            SoundManager.Instance.PlayStoppableSfx("SFX/Common/game-start");
         }
         else
         {
@@ -71,16 +79,22 @@ public class GameManager : Singleton<GameManager>
 
     public void RestartGame()
     {
-        _gameOverCanvas.SetActive(false);
+        Time.timeScale = 1f;
         InitStageList(); 
-        LoadNextRandomStage();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // LoadNextRandomStage();
+
+        SoundManager.Instance.StopSfx();
+        
+        _gameOverCanvas.SetActive(false);
+        _gameClearCanvas.SetActive(false);
     }
 
-    void ShowGameClear()
+    public void ShowGameClear()
     {
         Time.timeScale = 0f;
         _gameClearCanvas.SetActive(true);
         // TODO: game-clear 사운드로 변경
-        SoundManager.Instance.PlaySfx("SFX/Common/stage-clear");
+        SoundManager.Instance.PlayStoppableSfx("SFX/Common/stage-clear");
     }
 }
