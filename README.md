@@ -36,3 +36,4 @@
 
 * `Issues` 탭에 유니티 속성 워크숍에 대한 가이드라인이 있습니다. `Documentation`을 적절히 활용한 좋은 예시입니다.
 * `Pull Requests` 탭의 `Closed` 리스트에 PR 예시가 있습니다. PR의 `Description`을 적절히 활용한 좋은 예시입니다.
+* [★] 직군별 할 일 가이드: https://github.com/EwhaKing/king16-unity-workshop/issues/10
