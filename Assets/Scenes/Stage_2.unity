@@ -635,6 +635,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2529914287274575877, guid: 42392583e89c36145bed2a71e85b8947, type: 3}
+      propertyPath: m_Size.x
+      value: 7.5080347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529914287274575877, guid: 42392583e89c36145bed2a71e85b8947, type: 3}
+      propertyPath: m_Size.y
+      value: 7.461877
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529914287274575877, guid: 42392583e89c36145bed2a71e85b8947, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.023076534
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529914287274575877, guid: 42392583e89c36145bed2a71e85b8947, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.09231377
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529914287274575877, guid: 42392583e89c36145bed2a71e85b8947, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 7.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529914287274575877, guid: 42392583e89c36145bed2a71e85b8947, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 7.66
+      objectReference: {fileID: 0}
     - target: {fileID: 2851031329600269087, guid: 42392583e89c36145bed2a71e85b8947, type: 3}
       propertyPath: m_Name
       value: GameOverTrigger
@@ -1518,6 +1542,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 247328009666835238, guid: 3f794158e80cff2419cc757ec8d5c844, type: 3}
+      propertyPath: m_Size.x
+      value: 6.341304
+      objectReference: {fileID: 0}
+    - target: {fileID: 247328009666835238, guid: 3f794158e80cff2419cc757ec8d5c844, type: 3}
+      propertyPath: m_Size.y
+      value: 6.0585146
+      objectReference: {fileID: 0}
+    - target: {fileID: 247328009666835238, guid: 3f794158e80cff2419cc757ec8d5c844, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.031424046
+      objectReference: {fileID: 0}
+    - target: {fileID: 247328009666835238, guid: 3f794158e80cff2419cc757ec8d5c844, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.047129154
+      objectReference: {fileID: 0}
+    - target: {fileID: 247328009666835238, guid: 3f794158e80cff2419cc757ec8d5c844, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 247328009666835238, guid: 3f794158e80cff2419cc757ec8d5c844, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3809807931003896813, guid: 3f794158e80cff2419cc757ec8d5c844, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3
